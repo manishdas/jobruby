@@ -1,6 +1,17 @@
 class Applicant < Organization
-  def initialize(app_experience)
-    @experience=app_experience
+  attr_accessor :experience
+  @@applicant_number= nil
+  def initialize(name,email,address,experience)
+    @name=name
+    @email=email
+    @address=address
+    @experience=experience
+     #@@applicant_number += 1
   end
 
+  # def job_apply(job)
+  #     if job.is_a?(Job)
+  #       job.no_of_applicant
+  #     end
+  #   end
 end
